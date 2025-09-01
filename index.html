@@ -1,165 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Computer Syllabus</title>
+  <head>
     <style>
-        body {
-            margin: 0;
-            background-color: rgb(214, 212, 216);
-            scroll-behavior: smooth; 
-            font-size: 20px;
-            margin: 0 auto;
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+
+       
+      }
+
+      body {
+        background-color: #f0f2f5;
+        color: #333;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #2c3e50;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ecf0f1;
+      }
+
+      .navbar .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .navbar .nav-links li {
+        margin-left: 30px;
+      }
+
+      .navbar .nav-links a {
+        text-decoration: none;
+        color: #ecf0f1;
+        font-size: 18px;
+        position: relative;
+        transition: color 0.3s;
+      }
+
+      .navbar .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: #e74c3c;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+      }
+
+      .navbar .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .navbar .nav-links a.active {
+        color: #e74c3c;
+      }
+
+      .navbar .nav-links a.active::after {
+        width: 100%;
+      }
+
+      /* Header */
+      .header-section {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(to right, #3498db, #9b59b6);
+        color: white;
+      }
+
+      .header-section h1 {
+        font-size: 40px;
         
-            margin-right:40px;
-        }
+      }
 
-        .navigation {
-            background-color: #1f1f1f;
-            height: 50px; 
-            color: white;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .header-section p {
+        font-size: 20px;
+      }
 
-        .left {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
+      /* Content Sections */
+      .content-section {
+        padding: 60px 50px;
+        background-color: #fff;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 80%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
 
-        .options {
-            text-align: center;
-            line-height: 20px;
-            font-size: 16px;
-        }
+      .content-section:hover {
+        transform: translateY(-5px);
+      }
 
-        a {
-            text-decoration: none;
-            color: rgb(208, 19, 151);
-            padding: 10px 20px;
-            transition: 0.4s;
-        }
+      .content-section h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+        color: #2c3e50;
+      }
+       .content-section h3 {
+        font-size: 28px;
+        margin-bottom: 0;
+        color: #2c3e50;
+      }
 
-       
+      .content-section ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
 
-    
-        h1 {
-            font-size: 50px;
-            text-align: center;
-            
-        }
-      
-body{
-    margin:0px;
-    background-color: rgb(214, 212, 216);
-}
-      
-    .left   {
-        display:flex;
-        height:30px;
-       
-       
-       
+      .content-section ul li {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
 
-
-
-
-}
-.options{
- 
-
-
-
-
- 
- text-align:center;
- line-height:20px;
- font-size:50 px;;
-}
-a{
-text-decoration:none;
-color:rgb(208, 19, 151);
-padding-right:20px;
-padding-left:20px;
-padding-top:10px;
-padding-bottom: 10px;
-transition:0.4s ;
-
-
-}
-.options a:hover{
-color:white;
-background-color:rgb(149, 21, 125);
-}
-h1{
-    font-size:60px;
-    text-align: center;
-}
-
-
-.all_options{
-    gap:40px;
-    display:flex;
-    flex:0 5 2000px;
-}
-.main{
-    max-width:1000px;
-    margin-inline:auto;
-    font-size:55px;
-    background-color:rgb(214, 212, 216);
-    padding:25px;
-    margin-top:20px;
-    border-radius:10%;
-    padding-bottom:50px;
-
-}
-h1{
-    font-size:60px;
-    text-align: center;
-}
-img{
-    size:90%;
-}
-
-
-     
-
-        
-        
-        img{
-            max-width: 70%;
-        }
-        #chapter1,#chapter2,#chapter3,#chapter4,#chapter5,#chapter6,#chapter7,#chapter8,#programming{
-            padding-top:50px;
-        }
-            
-
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        margin-top: 40px;
+      }
+      .bigspace{
+        line-height:1.7;
+      }
     </style>
-</head>
-<body>
-    <div class="navigation">
-        <div class="left">
-            <div class="all_options">
-                <div class="options">
-                    <a href="#chapter1">CHAPTER 1</a>
-                </div>
-                <div class="options">
-                    <a href="#chapter2">CHAPTER 2</a>
-                </div>
-              
-              </div>
-            </div>
-        </div>
-    </div>
-<div style="background-color:rgb(214, 212, 216); margin-top:70px; margin-left:50px; margin-right:50px;><div data-aos="fade-up" data-aos-delay="500" class="content" ><div id="chapter1" class="scrollspy chapter"><blockquote class="title">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Syllabus</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Computer Syllabus</div>
+      <ul class="nav-links">
+        <li><a href="#Chapter1">Chapter 1</a></li>
+        <li><a href="#Chapter4">Chapter 4</a></li>
+        <li><a href="#database">Chapter 4</a></li>
+        <li><a href="#ai"></a></li>
+      </ul>
+    </nav>
+
+
+    <header class="header-section">
+      <h1>Welcome to the Computer Syllabus</h1>
+      <p>Explore detailed syllabus for various computer subjects</p>
+    </header>
+
+
+    <section id="Chapter1" class="content-section"  >
+    <div class="bigspace">
         <h1>Chapter 1: Database Management System(DBMS)</h1>
         <div>
             <h2>Data vs Information</h2>
@@ -296,6 +302,7 @@ img{
             <h3>Introduction</h3>
             <p><strong>Centralized Database</strong> systems store data in a single central location managed by one DBMS instance. All data access, processing, and administration occur on this central server.</p>
             <p><strong>Distributed Database</strong> systems distribute data across multiple physical locations, connected through a network but appear as a single database to users. This approach can enhance performance, fault tolerance, and scalability.</p>
+            <img src="dbtype.png" width=500px>
           
             <h3>Advantages</h3>
             <ul>
@@ -405,6 +412,44 @@ img{
               <li><strong>DATE:</strong> Stores calendar dates (year, month, day).</li>
               <li><strong>DATETIME:</strong> Stores date and time values.</li>
             </ul>
+              <h2>SQL JOINs</h2>
+        <p>SQL JOINs are used to combine rows from two or more tables based on a related column.</p>
+        
+        <h3>1. INNER JOIN</h3>
+        <p>Returns records that have matching values in both tables.</p>
+        <pre><code>
+SELECT employees.name, departments.dept_name
+FROM employees
+INNER JOIN departments
+ON employees.dept_id = departments.id;
+        </code></pre>
+
+        <h3>2. LEFT JOIN</h3>
+        <p>Returns all records from the left table, and the matched records from the right table.</p>
+        <pre><code>
+SELECT employees.name, departments.dept_name
+FROM employees
+LEFT JOIN departments
+ON employees.dept_id = departments.id;
+        </code></pre>
+
+        <h3>3. RIGHT JOIN</h3>
+        <p>Returns all records from the right table, and the matched records from the left table.</p>
+        <pre><code>
+SELECT employees.name, departments.dept_name
+FROM employees
+RIGHT JOIN departments
+ON employees.dept_id = departments.id;
+        </code></pre>
+
+        <h3>4. FULL JOIN</h3>
+        <p>Returns all records when there is a match in either left or right table.</p>
+        <pre><code>
+SELECT employees.name, departments.dept_name
+FROM employees
+FULL OUTER JOIN departments
+ON employees.dept_id = departments.id;
+        </code></pre>
           </div>
           <h1>DBMS Questions and Answers (2020-2024)</h1>
           <ol>
@@ -510,8 +555,13 @@ VALUES
             <blockquote>
 
 
-                
-        <h1>Chapter 2: Programming In C</h1></blockquote>
+     </div>
+    </section>
+
+    <!-- Networking Section -->
+    <section id="Chapter4" class="content-section">
+
+ <h1>Chapter 4: Programming In C</h1></blockquote>
         <div class="adswrapper"> 
     
 
@@ -781,12 +831,305 @@ VALUES
             }
             return max;
         }
+           <section>
+         
+        <h2>Structure in C</h2>
+        <p>A structure is a user-defined data type that allows grouping variables of different types under a single name.</p>
+
+        <h3>Syntax</h3>
+        <pre><code>
+struct StructureName {
+    data_type member1;
+    data_type member2;
+    ...
+};
+        </code></pre>
+         <h3>Structure Size</h3>
+        <p>Size of a structure is the sum of sizes of all its members, including padding added for alignment.</p>
+
+        <h3>Accessing Members</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Person p1 = {"Neha", 22};
+    printf("Name: %s, Age: %d", p1.name, p1.age);
+    return 0;
+}
+        </code></pre>
+
+        <h3>Nested Structure</h3>
+        <pre><code>
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Person {
+    char name[50];
+    struct Date dob;
+};
+
+struct Person p1 = {"Neha", {1, 9, 2003}};
+        </code></pre>
+
+        <h3>Array of Structures</h3>
+        <pre><code>
+struct Student {
+    char name[50];
+    int roll;
+};
+
+struct Student class[3] = { {"A", 1}, {"B", 2}, {"C", 3} };
+        </code></pre>
+
+        <h3>Passing Structure to Function</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+struct Student {
+    char name[50];
+    int roll;
+};
+
+void printStudent(struct Student s) {
+    printf("Name: %s, Roll: %d", s.name, s.roll);
+}
+
+int main() {
+    struct Student s1 = {"Neha", 101};
+    printStudent(s1);
+    return 0;
+}
+        </code></pre>
+    </section>
+
+    <!-- Union Section -->
+    <section>
+        <h2>Union in C</h2>
+        <p>Union is similar to structure, but all members share the same memory location. Only one member can store a value at a time.</p>
+
+        <h3>Syntax</h3>
+        <pre><code>
+union UnionName {
+    data_type member1;
+    data_type member2;
+    ...
+};
+        </code></pre>
+
+        <h3>Comparison: Structure vs Union</h3>
+        <ul>
+            <li>Structure allocates memory for all members, Union allocates memory equal to the largest member.</li>
+            <li>Structure members can store values simultaneously, Union only one at a time.</li>
+        </ul>
+    </section>
+
+    <!-- Pointers Section -->
+    <section>
+        <h2>Pointers in C</h2>
+        <p>Pointers store the memory addresses of variables. They are used for dynamic memory, function arguments, and arrays.</p>
+
+        <h3>Declaration & Initialization</h3>
+        <pre><code>
+int x = 10;
+int *p = &x;   // Pointer storing address of x
+        </code></pre>
+
+        <h3>Pointer and Function</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+void increment(int *num) {
+    (*num)++;
+}
+
+int main() {
+    int a = 5;
+    increment(&a);
+    printf("Value: %d", a);
+    return 0;
+}
+        </code></pre>
+
+        <h3>Call by Reference vs Call by Value</h3>
+        <ul>
+            <li>Call by value passes a copy of variable.</li>
+            <li>Call by reference passes the address, allowing function to modify original variable.</li>
+        </ul>
+
+        <h3>Pointer with Arrays</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {1,2,3,4,5};
+    int *p = arr;
+
+    for(int i=0; i&lt;5; i++)
+        printf("%d ", *(p+i));
+    return 0;
+}
+        </code></pre>
+
+        <h3>Advantages and Disadvantages</h3>
+        <ul>
+            <li>Efficient memory usage and fast access</li>
+            <li>Enables dynamic memory allocation</li>
+            <li>Can be complex and error-prone (dangling pointers, segmentation faults)</li>
+        </ul>
+    </section>
+
+    <!-- File Handling Section -->
+    <section>
+        <h2>File Handling in C</h2>
+        <p>Files are used to store data permanently. C provides functions for sequential and random access.</p>
+
+        <h3>Concept and Need</h3>
+        <ul>
+            <li>Data files store information permanently</li>
+            <li>Required to save data beyond program execution</li>
+        </ul>
+
+        <h3>Sequential and Random Files</h3>
+        <ul>
+            <li>Sequential: Data is processed in order</li>
+            <li>Random: Data can be accessed at any position</li>
+        </ul>
+
+        <h3>File Handling Functions</h3>
+        <pre><code>
+// Open and close
+fopen("file.txt", "r/w/a");
+fclose(fp);
+
+// Read and Write
+getc(fp);   putc(ch, fp);
+fscanf(fp, "%s", str);   fprintf(fp, "%s", str);
+getw(fp);   putw(num, fp);
+fgets(str, n, fp);   fputs(str, fp);
+fread(buffer, size, n, fp);   fwrite(buffer, size, n, fp);
+
+// File operations
+remove("file.txt");   rename("old.txt","new.txt");
+        </code></pre>
+
+        <h3>Random Access Functions</h3>
+        <pre><code>
+fseek(fp, offset, SEEK_SET);   // Move pointer
+ftell(fp);                     // Return current position
+rewind(fp);                     // Move pointer to beginning
+        </code></pre>
+
+        <h3>File Opening Modes</h3>
+        <ul>
+            <li>Read: r, r+</li>
+            <li>Write: w, w+</li>
+            <li>Append: a, a+</li>
+        </ul>
+
+        <h3>Steps to Work with Files</h3>
+        <ol>
+            <li>Define file pointer</li>
+            <li>Open file with required mode</li>
+            <li>Read, write, or append data</li>
+            <li>Close the file</li>
+        </ol>
+
+        <h3>Example: Writing and Reading File</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fp;
+    char str[50];
+
+    // Writing
+    fp = fopen("data.txt", "w");
+    fprintf(fp, "Hello World");
+    fclose(fp);
+
+    // Reading
+    fp = fopen("data.txt", "r");
+    fscanf(fp, "%s", str);
+    printf("Data: %s", str);
+    fclose(fp);
+
+    return 0;
+}
+        </code></pre>
+
+        <h3>End of File (EOF)</h3>
+        <p>EOF indicates the end of a file while reading.</p>
+        <pre><code>
+while((ch = getc(fp)) != EOF) {
+    putchar(ch);
+}
+        </code></pre>
+    </section>
+    <section>
+    <h2>Typedef in C</h2>
+    <p><strong>Typedef</strong> is a keyword in C used to create a new name (alias) for an existing data type. It improves code readability ,<br> and makes it easier to modify data types later.</p>
+
+    <h3>Syntax</h3>
+    <pre><code>
+typedef existing_data_type new_name;
+    </code></pre>
+
+    <h3>Examples</h3>
+    <pre><code>
+// Example 1: Simple alias
+typedef unsigned int UINT;
+UINT age = 25;
+
+// Example 2: Struct alias
+typedef struct {
+    char name[50];
+    int roll;
+} Student;
+
+Student s1 = {"Neha", 101};
+printf("Name: %s, Roll: %d", s1.name, s1.roll);
+    </code></pre>
+
+    <h3>Advantages of Typedef</h3>
+    <ul>
+        <li>Makes code more readable and maintainable</li>
+        <li>Easy to modify underlying data type</li>
+        <li>Useful for defining complex data types like structs and pointers</li>
+    </ul>
+</section>
 </div>   
-<h2>Past Year Questions of Functions (2020-2024 and Model Questions)</h2>   
-            
-        
-</div>
-      </div>
+
+
+    </section>
+
     
-</body>
+    <footer>
+      <p>&copy; 2025 Computer Syllabus | Designed by Mausam Thapaliya</p>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(link.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Highlight active link
+          links.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
